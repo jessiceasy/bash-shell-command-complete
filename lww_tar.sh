@@ -5,7 +5,7 @@ _lww_tar() {
     tips[1]='1 tar -czvf ***.tar.gz 要压缩的文件或目录 #gz'
     tips[2]='2 tar -cjvf ***.tar.bz2 要压缩的文件或目录 #bz2'
     tips[3]='3 tar -xzvf ***.tar.gz  #解压gz'
-    tips[4]='4 tar -cjvf ***.tar.bz2 #解压bz2'
+    tips[4]='4 tar -xjvf ***.tar.bz2 #解压bz2'
     for i in "${!tips[@]}"; do
       printf -v tips[$i] '%*s' "-$COLUMNS"  "${tips[$i]}"
     done
