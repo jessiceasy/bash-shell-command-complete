@@ -5,6 +5,11 @@ _lww_tar() {
     tips[2]='tar -cjvf ***.tar.bz2 要压缩的文件或目录 #bz2'
     tips[3]='tar -xzvf ***.tar.gz  #解压gz'
     tips[4]='tar -cjvf ***.tar.bz2 #解压bz2'
+    echo tips
+    for i in ${!tips[@]}; do
+        echo i
+     # suggestions[$i]="$(printf '%*s' "-$COLUMNS"  "${suggestions[$i]}")"
+    done
     COMPREPLY=( "${tips[@]##*/}" )
     
 }
