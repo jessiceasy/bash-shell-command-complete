@@ -5,7 +5,7 @@ _lww_find() {
     tips[1]='1 find -maxdepth 1 -not -name init.sh # 逻辑not'
     tips[2]='2 find -maxdepth 1 -not -name init.sh -a -not -name "bbbb*"   #逻辑与'
     tips[3]='3 find -maxdepth 2  -not -name init.sh -o -not -name "bbbb*"  #逻辑或'
-    tips[4]='4 find *.c -exec cp "'"{}"'" /tmp \; #拷贝查找结果至tmp  "\;"为固定格式 '
+    tips[4]='4 find *.c -exec cp "'"{}"'" /tmp \; #拷贝查找结果至tmp  "\;"为固定格式  需要将大括号外面的双引号变为改为单引号'
 
     for i in "${!tips[@]}"; do
       printf -v tips[$i] '%*s' "-$COLUMNS"  "${tips[$i]}"
